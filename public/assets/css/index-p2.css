@@ -1,0 +1,306 @@
+@font-face{
+  src: url(../fonts/Itim-Regular.ttf);
+  font-family: itim;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: itim;
+}
+
+.top-left {
+  position: absolute;
+  top: 3px;
+  left: 26px;}
+  #p1{
+    font-size: 60px;
+  }
+.red{
+  color: green;
+}
+.top-right {
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+.join{
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+}
+
+.centered {
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  p{
+      font-size: 25px;
+  }
+  * {
+      box-sizing: border-box;
+    }
+    form.example #input1[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 100%;
+      background: #f1f1f1;
+      font-family: itim;
+    }
+    form.example button {
+      float: left;
+      width: 15%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+}
+    
+#table1 {
+  width: 100%;
+  height: 200px;
+  border-collapse: separate;
+  border-spacing: 25px;
+}
+
+.col_1{
+background-color: pink;
+border: 5px solid black;
+font-family: itim;
+width: 30%;
+padding: 10px;
+
+}
+.button1{
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+}
+.img_1{
+  float: right;
+}
+.col_2{
+background-color: coral;
+border: 5px solid black;
+font-family: itim;
+width: 30%;
+padding: 10px;
+
+}
+.button2{
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+}
+.img_2{
+  float: right;
+}
+.col_3{
+background-color: #CD14A3;
+border: 5px solid black;
+font-family: itim;
+width: 30%;
+padding: 10px;
+}
+.button3{
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+
+}
+.img_3{
+  float: right;
+}
+
+.table2{
+width: 100%;
+height: 500px;
+border: 2px white solid;
+}
+img { 
+  vertical-align: middle; 
+}
+.left-part{
+position: relative;
+width: 30%;
+font-size: 30px;
+font-family: itim;
+display: contents;
+}
+.right-part{
+width: 1200px;
+padding: 30px;
+background-color: #E6F0D0;
+}
+#box1{
+  width: 350px;
+  padding: 20px;
+  align-content: center;
+  border-right: 1px black solid;
+
+}
+.main_img {
+  padding: 15px;
+}
+
+.detail_img{
+  border-collapse: separate;
+  border-spacing: 5px;
+  align-content: center;
+}
+#price1{
+  color: red;
+}
+#price2{
+  color: green;
+}
+#bu1{
+  float: right;
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+}
+.center {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 45px;
+font-family: itim;
+}
+#top1{
+  float: right;
+  padding: 5px;
+  background-color: #BA670F;
+  border-radius: 10%;
+}
+#right{
+  text-align: center;
+}
+#table2 {
+  width: 1200px;
+  height: 500px;
+  border: 5px black solid;
+  background-color: white;
+}
+#box2{
+  padding: 30px;
+
+  font-family: itim;
+}
+#header {
+  font-size: 40px;
+}
+#price10{
+  color: red;
+}
+#price20{
+  color: green;
+
+}
+#price12{
+  float: right;
+  font-size: 30px;
+}
+#cart1 { 
+  font-size: 25px;
+  border: 2px black solid;
+  font-family: itim;
+}
+#tag12{
+  background-color: #CDCECC;
+  font-size: 20px;
+}
+#table3{
+  width: 1200px;
+  height: 300px;
+  border: 5px black solid;
+  background-color: white;
+  padding: 30px;
+}
+#Anon{
+  text-align: left;
+  font-family: 'MilkyNice-Clean', Arial, sans-serif;
+  color: blue;
+ border: 2px solid gray;
+ margin-top: -20px;
+ background-color: white;
+ padding: 20px;
+}
+
+#small{
+   color: grey;
+   font-size: small;
+}
+#comment{
+   font-size: small;
+   font-family: 'MilkyNice-Clean', Arial, sans-serif;
+   color: black;
+   margin-left: 20px;
+   margin-bottom: 20px;
+   
+}
+#profile{
+  width: 70px;
+  float: left;
+  
+}
+
+#div_last{
+  position: relative;
+  width: 99.5%;
+  border: 3px solid black;
+  height: 20vh;
+  background-color: white;
+}
+#div_last span{
+  position: relative;
+  padding: 3px 10px;
+  background-color: white;
+  bottom: 10px;
+  left: 10px;
+  font-size: medium;
+  font-family: 'MilkyNice-Clean', Arial, sans-serif;
+}
+#send{
+  background-color: green;
+  border: 2px  solid black;
+  height: 50px;
+  width: 100px;
+  font-family: 'MilkyNice-Clean', Arial, sans-serif;
+  font-size: large;
+  float: right;
+  
+  
+}
+#discard{
+  background-color:white;
+  border: 2px  solid black;
+  height: 50px;
+  width: 100px;
+  font-family: 'MilkyNice-Clean', Arial, sans-serif;
+  font-size: large;
+  float: right;
+  
+}
+#send img{
+  width: 20px;
+}
+#discard img{
+  width: 20px;
+}
+#write{
+  border: none;
+}

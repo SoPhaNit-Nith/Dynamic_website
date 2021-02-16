@@ -1,0 +1,20 @@
+.container{
+    border:2px solid 	rgb(66, 186, 150);
+    border-radius: 2%;
+}
+.welcome{
+    color: rgb(0, 209, 146);
+}
+.txt{
+    color: lightslategray;
+}
+.error{
+    color: red;
+    float: right;
+}
+.btn.btn-success{
+    width: 100%;
+}
+.signup{
+    color: lightslategray;
+}

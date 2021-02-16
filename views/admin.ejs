@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/assets/admin-style.css">        
+
+</head>
+
+<body>
+    
+ <div class="topside"><span class="awesome">Awesome Shop | Admin Pannel</span> <span class="link"><a href="http://localhost:3000/">Home</a> | <a href="http://localhost:3000/signin">Log Out</a></span></div> 
+
+    <div class="row">
+        <div class="col-3">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Product</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">User</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Purchase Order</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">History</a>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+              <div class="card">
+                <div class="row mt-3">
+                    <div class="col-6 ">
+                       <p class="text">All Products in stock</p> 
+                    </div>
+                    <div class="col-6 ">
+                        <!-- <button class="addProduct btn btn-primary"> Add Product </button> -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="addProduct btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Add Product
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                    <form action="http://localhost:3000/product" method="POST" enctype="multipart/form-data">    
+
+                              <div class="modal-body">
+                                
+                                    <div class="mb-2">
+                                      <label for="name" class="form-label">Name</label>
+                                      <input type="text" class="form-control" id="name" name="productname">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="img" class="form-label">Image</label>
+                                        <input type="file" class="form-control" id="img" name="img">
+                                      </div>
+                                    <div class="mb-2">
+                                      <label for="Qty" class="form-label">Quantity</label>
+                                      <input type="number" class="form-control" id="Qty" name="qty">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="detail" class="form-label">Detail of product</label>
+                                        <input type="text" class="form-control" id="detail" name="detail">
+                                    </div>
+                                    <div class="mb-2">
+                                    <label for="Date" class="form-label">Import Date</label>
+                                    <input type="date" class="form-control" id="Date" name="importDate">
+                                    </div>
+                                    <div class="mb-2">
+                                      <label for="price" class="form-label">Price</label>
+                                      <input type="number" step="any" class="form-control" id="price" name="price">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="Date" class="form-label">Category</label>
+                                        <select class="form-select" aria-label="Default select example" name="category">
+                                            <option selected value="electronics">Electronics</option>
+                                            <option value="bags">Hand bags</option>
+                                            <option value="wallet">Wallet</option>
+                                            <option value="clothes">Clothes</option>
+                                        </select>
+                                    </div>
+                                    
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Product</button>
+                              </div>
+                            </div>
+                        </form> 
+
+                          </div>
+                        </div>
+                </div>
+            </div>
+               
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col-2">#</th>
+                            <th scope="col-2">Name</th>
+                            <th scope="col-1">Qty</th>
+                            <th scope="col-2">Detail</th>
+                            <th scope="col-2">Instock At</th>
+                            <th scope="col-1">Category</th>
+                            <th scope="col-1">Price</th>
+                            <th scope="col-1">Action</th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody>
+                            
+                        <% for(var i=0; i< result.length; i++) {%> 
+                          <tr>
+                            <th scope="row"><img src="<%= result[i].img %>" width="100" alt=""></th>
+                            <td><%= result[i].productname %></td>
+                            <td><%= result[i].qty %></td>
+                            <td><%= result[i].detail %></td>
+                            <td><%= result[i].importDate.toDateString() %></td>
+                            <td><%= result[i].category %></td>
+                            <td><%= result[i].price %> $</td>
+                            <td>
+                                <form action="/product/<%= result[i]._id %>" method="POST">
+                                <button class="btn btn-danger" type="submit" value="<%= result[i]._id %>">Delete</button>
+                                </form>
+                            </td>
+                         
+                          </tr>
+                          <% } %>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Not enought time to complete this part</div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Not enought time to complete this part</div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Not enought time to complete this part</div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
